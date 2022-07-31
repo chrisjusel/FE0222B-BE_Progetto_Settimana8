@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "a2e68719-b9bc-4c04-a0a0-8a7f910c01c0",
+		"name": "Ewallet - Christian Vitale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21022289"
+	},
+	"item": [
+		{
+			"name": "createContoCorrente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"iban\": \"IT000111222333444\",\r\n    \"saldo\": \"12.54\",\r\n    \"intestatario\": \"Christian Vitale\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllContiCorrente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByIban",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/getbyiban?iban=IT000111222333444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"getbyiban"
+					],
+					"query": [
+						{
+							"key": "iban",
+							"value": "IT000111222333444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteContoCorrente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/delete?iban=IT000111222333444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "iban",
+							"value": "IT000111222333444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prelievo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"iban\": \"IT000111222333444\",\r\n    \"importo\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/prelievo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"prelievo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Versamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"iban\": \"IT000111222333444\",\r\n    \"importo\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/versamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"versamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListaMovimentiByIban",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/listamovimenti?iban=IT000111222333444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"listamovimenti"
+					],
+					"query": [
+						{
+							"key": "iban",
+							"value": "IT000111222333444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateContoCorrente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"iban\": \"IT000111222333444\",\r\n        \"intestatario\": \"Mario Vitale\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/FE0222B-BE_progetto_settimana8/rest/ewallet/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FE0222B-BE_progetto_settimana8",
+						"rest",
+						"ewallet",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
