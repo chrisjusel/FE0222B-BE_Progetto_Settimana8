@@ -63,7 +63,9 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
 ### Metodi PUT
 - **updateContoCorrente**:   /rest/ewallet/update
  ```
+ //request body
  {
+     "iban": "IT000111222333444",
      "intestatario": "Mario Vitale"
  }
  ```
