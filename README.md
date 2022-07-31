@@ -26,12 +26,12 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
 
 ## Utilizzo API
 ### Metodi GET
-- _getByIban   /rest/ewallet/getbyiban?iban=IT000111222333444
-- getAllContiCorrente   /rest/ewallet/getall
-- listaMovimentiByIban    /rest/ewallet/listamovimenti?iban=IT000111222333444
+- **getByIban**:   /rest/ewallet/getbyiban?iban=IT000111222333444
+- **getAllContiCorrente**:   /rest/ewallet/getall
+- **listaMovimentiByIban**:    /rest/ewallet/listamovimenti?iban=IT000111222333444
 
 ### Metodi POST
-- createContoCorrente   /rest/ewallet/create
+- **createContoCorrente**:   /rest/ewallet/create
 ```
 //request body
 {
@@ -40,7 +40,7 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
     "intestatario": "Mario Rossi"
 }
 ```
-- prelievo   /rest/ewallet/prelievo
+- **prelievo**:   /rest/ewallet/prelievo
 ```
 //request body
 {
@@ -48,7 +48,7 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
     "importo": 10
 }
 ```
-- versamento    /rest/ewallet/versamento
+- **versamento**:    /rest/ewallet/versamento
 ```
 //request body
 {
@@ -58,10 +58,10 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
 ```
 
 ### Metodi DELETE
-- deleteContoCorrente   /rest/ewallet/delete?iban=IT000111222333444
+- **deleteContoCorrente**:   /rest/ewallet/delete?iban=IT000111222333444
 
 ### Metodi PUT
-- updateContoCorrente   /rest/ewallet/update
+- **updateContoCorrente**:   /rest/ewallet/update
  ```
  {
      "intestatario": "Mario Vitale"
