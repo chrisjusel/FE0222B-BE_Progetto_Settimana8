@@ -12,7 +12,7 @@ Alcune scelte sono state prese per puro scopo didattico.
 ## Quadro generale
 L'applicazione espone metodi REST all'utente per la gestione di conti corrente
 
-##Funzionalità principali
+## Funzionalità principali
 - Creazione di un conto corrente
 - Modifica di un conto corrente
 - Cancellazione di un conto corrente
@@ -30,7 +30,7 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
 - getAllContiCorrente   /rest/ewallet/getall
 - listaMovimentiByIban    /rest/ewallet/listamovimenti?iban=IT000111222333444
 
-###Metodi POST
+### Metodi POST
 - createContoCorrente   /rest/ewallet/create
 ```
 //request body
