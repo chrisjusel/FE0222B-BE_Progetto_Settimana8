@@ -26,7 +26,7 @@ Ciascuna di queste chiamate, a puro scopo didattico, non rende persistenti i dat
 
 ## Utilizzo API
 ### Metodi GET
-- **getByIban**:   (/rest/ewallet/getbyiban?iban=IT000111222333444)
+- **getByIban**:   /rest/ewallet/getbyiban?iban=IT000111222333444
 - **getAllContiCorrente**:   /rest/ewallet/getall
 - **listaMovimentiByIban**:    /rest/ewallet/listamovimenti?iban=IT000111222333444
 
