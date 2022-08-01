@@ -54,11 +54,11 @@ public class ContoCorrenteRest {
 	@Path("/update")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response modificaContoCorrente(ContoCorrente cc) {
-		ContoCorrente output = null;
-		if (cc != null) {
-			output = ccDAO.modificaConto(cc);
+		ContoCorrente output = ccDAO.modificaConto(cc);
+		if (cc != null && output != null) {
+			return Response.status(201).entity(output).build();
 		}
-		return Response.status(201).entity(output).build();
+		return Response.status(201).entity("Modifica non andata a buon fine").build();
 	}
 
 	@GET
@@ -73,7 +73,9 @@ public class ContoCorrenteRest {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getCcByIban(@QueryParam("iban") String iban) {
 		ContoCorrente cc = ccDAO.getContoByIban(iban);
-		return Response.status(201).entity(cc).build();
+		if(cc != null)
+			return Response.status(201).entity(cc).build();
+		return Response.status(201).entity("Conto corrente non presente").build();
 	}
 
 	@POST
@@ -81,7 +83,9 @@ public class ContoCorrenteRest {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response prelievo(Movimento movimento) {
 		ContoCorrente cc = ccDAO.preleva(movimento);
-		return Response.status(201).entity(cc).build();
+		if(cc != null)
+			return Response.status(201).entity(cc).build();
+		return Response.status(201).entity("Errore nel prelievo").build();
 	}
 
 	@POST
@@ -89,7 +93,9 @@ public class ContoCorrenteRest {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response versamento(Movimento movimento) {
 		ContoCorrente cc = ccDAO.versa(movimento);
-		return Response.status(201).entity(cc).build();
+		if(cc != null)
+			return Response.status(201).entity(cc).build();
+		return Response.status(201).entity("Errore nel versamento").build();
 	}
 
 	@GET
